@@ -21,6 +21,7 @@ public class ConfigurationManager {
 	public static final String CONFIRM_BOOK_PAGE_PATH = "CONFIRM_BOOK_PAGE_PATH";
 	public static final String ERROR_PAGE_PATH = "ERROR_PAGE_PATH";
 	public static final String SUCCESS_PAGE_PATH = "SUCCESS_PAGE_PATH";
+	public static final String MY_TOURS_PAGE_PATH = "MY_TOURS_PAGE_PATH";
 	
 	
 	public static final String ORDERCAR_PAGE_PATH = "ORDERCAR_PAGE_PATH";

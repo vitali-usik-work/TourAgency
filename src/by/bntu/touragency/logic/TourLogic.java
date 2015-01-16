@@ -8,14 +8,24 @@ import by.bntu.touragency.model.Tour;
 public class TourLogic {
 
 	public static List<Tour> buildCarList() {
-		List<Tour> carList = null;
+		List<Tour> tourList = null;
 		
 		try {
-			carList = TourListDAO.daoBuildTourList();
+			tourList = TourListDAO.daoBuildTourList();
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		return carList;
+		return tourList;
 	}
+
+    public static List<Tour> buildMyTourList(int userId) {
+        List<Tour> tourList = null;
+        try {
+            tourList = TourListDAO.daoBuildMyTourList(userId);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return tourList;
+    }
 
 }

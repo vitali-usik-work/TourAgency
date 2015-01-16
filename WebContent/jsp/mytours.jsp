@@ -21,7 +21,7 @@
 		</div>
 		<div class="header_nav">
 			<a href="login.jsp">Login</a>
-			<c:if test="${not empty user and user.role eq 'user'}"><a href="controller?command=viewMyTours&userId=${user.id }">View My Tours</a></c:if>
+			<a href="controller?command=home">Main</a>
 			<%-- <a href="controller?command=goMain&role=${user.role}">Main page</a>
 			<a href="controller?command=myOrders&login=${user.login}"><fmt:message key="main.myOrdres"/></a>
 			<c:if test="${not empty user and user.role eq 'admin'}"><a href="controller?command=viewRentCars"><fmt:message key="main.ordersOnHands"/></a></c:if>
@@ -29,7 +29,7 @@
 		</div>
 	
 		<div class="tours">
-			<h4>Tours</h4>
+			<h4>My Tours</h4>
 			<table class="tour_table" width="100%" cellpadding="0" cellspacing="0">
 				<tr>
 					<th>id</th>
@@ -40,10 +40,6 @@
 					<th>country</th>
 					<th>hotel</th>
 					<th>type_of_trip</th>
-					<th>free_places</th>
-					<c:if test="${not empty user and user.role eq 'user'}">
-						<th>Book</th>
-					</c:if>
 				</tr>
 				<c:forEach  var="tour" items="${tourList}">
 				<c:if test="${not empty tour}">
@@ -56,10 +52,6 @@
 					<td><c:out value="${tour.country}"/></td>
 					<td><c:out value="${tour.hotel}"/></td>
 					<td><c:out value="${tour.type_of_trip}"/></td>
-					<td><c:out value="${tour.free_places}"/></td>
-					<c:if test="${not empty user and user.role eq 'user'}">
-						<td><a href="controller?command=book&tourId=${tour.id}&free_places=${tour.free_places}">Book</a></td>
-					</c:if>
 				</tr>
 				</c:if>
 				</c:forEach>

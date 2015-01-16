@@ -21,6 +21,7 @@
 		</div>
 		<div class="header_nav">
 			<a href="login.jsp">Login</a>
+			<a href="controller?command=home">Main</a>
 			<%-- <a href="controller?command=goMain&role=${user.role}">Main page</a>
 			<a href="controller?command=myOrders&login=${user.login}"><fmt:message key="main.myOrdres"/></a>
 			<c:if test="${not empty user and user.role eq 'admin'}"><a href="controller?command=viewRentCars"><fmt:message key="main.ordersOnHands"/></a></c:if>
@@ -28,21 +29,7 @@
 		</div>
 	
 		<div class="tours">
-			<h4>Confirm Tour</h4>
-			<form action="controller" method="post">
-				<input type="hidden" name="command" value="confirmBook"/>		
-				<input type="hidden" name="tourId" value="${tourId}"/>
-				<input type="hidden" name="free_places" value="${free_places}"/>
-				<input type="hidden" name="userId" value="${user.id}"/>
-	    		<select name="amount" size="1">
-	    			<option value="1">1</option>
-	  				<option value="2">2</option>
-	  				<option value="3">3</option>
-	  				<option value="4">4</option>
-	  				<option value="5">5</option>
-	   			 </select><br/>
-				<input type="submit" value="confirm">
-			</form>
+			<h3>${errorMessage}</h3>
 		</div>
 	</div>
 </body>

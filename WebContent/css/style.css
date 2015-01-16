@@ -1,0 +1,31 @@
+* {padding:0; margin:0;}
+img {border:0 none;}
+div {display:block; position:relative;}
+ul {list-style:none;}
+.clr::after {display:none; position:relative; content:' '; color:transparent; font-size:3px; line-height:3px; clear:both;}
+
+/* wrapper */
+.wrapper {width:960px; margin:0 auto;}
+
+/* header */
+.header {height:426px; background:url(trav.jpg) 0 0 no-repeat;}
+	.header h1 {display:block; position:absolute; top:20px; right:20px; font-family:Arial, sans-serif; color:666; font-size:20px; line-height:23px;}
+	.header p {display:block; position:absolute; top:50px; right:20px; font-family:Arial, sans-serif; color:#666; font-size:14px; line-height:18px; text-align:right;}
+
+/* wrappers */
+.tours {margin:20px 0 0; padding:20px; border:1px solid #666;}
+.header_nav {margin:20px 0 0; padding:20px; border:1px solid #666;}
+h4 {font-family:Arial, sans-serif; color:#74a4c2; font-size:18px; line-height:20px; padding:0 0 15px;}
+a {color:#74a4c2; text-decoration:underline;}
+a:hover {text-decoration:none;}
+
+/* orders */
+.tours table {border:1px solid #666; width:100%; margin:0 0 15px;}
+	.tours table th {padding:5px; font-family:Arial, sans-serif; color:#000; background:#74a4c2; font-size:14px; line-height:18px; text-align:left;}
+	.tours table td {padding:5px; font-family:Arial, sans-serif; color:#000;  font-size:14px; line-height:18px;}
+	.tours table tr:nth-child(even) td {background:#fff;}
+	.tours table tr:nth-child(odd) td {background:#e4e4e4;}
+	
+/* footer */
+.footer {margin:20px 0 0;}
+	.footer p {text-align:center;}

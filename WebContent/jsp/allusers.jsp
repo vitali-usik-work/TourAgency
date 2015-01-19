@@ -21,12 +21,13 @@
 		</div>
 		<div class="header_nav">
 			<a href="login.jsp">Login</a>
-			<c:if test="${not empty user and user.role eq 'user'}"><a href="controller?command=viewMyTours&userId=${user.id }">View My Tours</a></c:if>
+			<a href="controller?command=home">Main</a>
 			
 		</div>
 	
 		<div class="users">
 			<h4>Users</h4>
+			<h5><a href="controller?command=addUser">Add user</a></h5>
 			<table class="tour_table" width="100%" cellpadding="0" cellspacing="0">
 				<tr>
 					<th>id</th>
@@ -35,7 +36,7 @@
 					<th>role</th>
 					<th>sum_of_trip</th>
 					<th>discount</th>
-					<th>Delete user (not work)</th>
+					<th>Actions</th>
 				</tr>
 				<c:forEach  var="user" items="${userList}">
 				<c:if test="${not empty user}">
@@ -46,7 +47,10 @@
 					<td><c:out value="${user.role}"/></td>
 					<td><c:out value="${user.sum_of_trip}"/></td>
 					<td><c:out value="${user.discount}"/> %</td>
-					<td><a href="controller?command=book&tourId=${tour.id}&free_places=${tour.free_places}">Delete (not work)</a></td>
+					<td>
+						<a href="controller?command=viewMyTours&userId=${user.id }">View user's torus</a>&nbsp;/&nbsp;
+						<a href="controller?command=deleteUser&userId=${user.id }">Delete user</a>					
+					</td>
 				</tr>
 				</c:if>
 				</c:forEach>

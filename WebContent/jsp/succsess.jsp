@@ -22,14 +22,12 @@
 		<div class="header_nav">
 			<a href="login.jsp">Login</a>
 			<a href="controller?command=home">Main</a>
-			<%-- <a href="controller?command=goMain&role=${user.role}">Main page</a>
-			<a href="controller?command=myOrders&login=${user.login}"><fmt:message key="main.myOrdres"/></a>
-			<c:if test="${not empty user and user.role eq 'admin'}"><a href="controller?command=viewRentCars"><fmt:message key="main.ordersOnHands"/></a></c:if>
-			<c:if test="${not empty user and user.role eq 'admin'}"><a href="controller?command=viewAllOrders"><fmt:message key="main.allOrders"/></a></c:if> --%>
+			<c:if test="${not empty user and user.role eq 'user'}"><a href="controller?command=viewMyTours&userId=${user.id }">View My Tours</a></c:if>
+			<c:if test="${not empty user and user.role eq 'admin'}"><a href="controller?command=viewAllUsers">View Users</a></c:if>
 		</div>
 	
 		<div class="tours">
-			Sucsess!!!
+			<h3>${successMessage}</h3>
 		</div>
 	</div>
 </body>

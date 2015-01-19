@@ -29,24 +29,6 @@ public class LoginCommand implements Command {
 		// login and password check
 		try {
 			User user = LoginLogic.checkLogin(name, surname);
-//			if("admin".equals(user.getRole())){
-//				try {
-//					List<User> userList = new ArrayList<User>();
-//					userList = UserLogic.buildUserList();
-//					request.setAttribute("userList", userList);
-//					page = ConfigurationManager.getInstance().getProperty(
-//							ConfigurationManager.MAIN_PAGE_PATH);
-//					
-//					List<Order> orderList = new ArrayList<Order>();
-//					orderList = OrderListLogic.buildOrderList();
-//					request.setAttribute("orderList", orderList);
-//					page = ConfigurationManager.getInstance().getProperty(
-//							ConfigurationManager.MAIN_PAGE_PATH);
-//					
-//				} catch (Exception e) {
-//					e.printStackTrace();
-//				}	
-//			}
 			
 			HttpSession session = request.getSession();
 			session.setAttribute("user", user);

@@ -4,9 +4,12 @@ import java.util.*;
 
 import javax.servlet.http.HttpServletRequest;
 
+import by.bntu.touragency.command.AddNewUserCommand;
+import by.bntu.touragency.command.AddUserCommand;
 import by.bntu.touragency.command.BookCommand;
 import by.bntu.touragency.command.Command;
 import by.bntu.touragency.command.ConfirmBookCommand;
+import by.bntu.touragency.command.DeleteUserCommand;
 import by.bntu.touragency.command.HomeCommand;
 import by.bntu.touragency.command.LoginCommand;
 import by.bntu.touragency.command.NoCommand;
@@ -29,6 +32,9 @@ public class RequestHelper {
 		commands.put("confirmBook", new ConfirmBookCommand());
 		commands.put("viewMyTours", new ViewMyToursCommand());
 		commands.put("viewAllUsers", new ViewAllUsersCommand());
+		commands.put("deleteUser", new DeleteUserCommand());
+		commands.put("addUser", new AddUserCommand());
+		commands.put("addNewUser", new AddNewUserCommand());
 	}
 	
 	/**

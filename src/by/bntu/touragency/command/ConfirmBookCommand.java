@@ -24,6 +24,7 @@ public class ConfirmBookCommand implements Command {
 		try {
             if(free_places > amount) {
                 ConfirmBookLogic.confirmBook(tourId, userId, amount, free_places);
+                request.setAttribute("successMessage" , "The tour is booked");
                 page = ConfigurationManager.getInstance().getProperty(
                         ConfigurationManager.SUCCESS_PAGE_PATH);
             } else {

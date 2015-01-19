@@ -20,11 +20,17 @@ a {color:#74a4c2; text-decoration:underline;}
 a:hover {text-decoration:none;}
 
 /* orders */
-.tours, .users table {border:1px solid #666; width:100%; margin:0 0 15px;}
-	.tours, .users table th {padding:5px; font-family:Arial, sans-serif; color:#000; background:#74a4c2; font-size:14px; line-height:18px; text-align:left;}
-	.tours, .users table td {padding:5px; font-family:Arial, sans-serif; color:#000;  font-size:14px; line-height:18px;}
-	.tours, .users table tr:nth-child(even) td {background:#fff;}
-	.tours, .users table tr:nth-child(odd) td {background:#e4e4e4;}
+.users table {border:1px solid #666; width:100%; margin:0 0 15px;}
+	.users table th {padding:5px; font-family:Arial, sans-serif; color:#000; background:#74a4c2; font-size:14px; line-height:18px; text-align:left;}
+	.users table td {padding:5px; font-family:Arial, sans-serif; color:#000;  font-size:14px; line-height:18px;}
+	.users table tr:nth-child(even) td {background:#fff;}
+	.users table tr:nth-child(odd) td {background:#e4e4e4;}
+	
+.tours table {border:1px solid #666; width:100%; margin:0 0 15px;}
+	.tours table th {padding:5px; font-family:Arial, sans-serif; color:#000; background:#74a4c2; font-size:14px; line-height:18px; text-align:left;}
+	.tours table td {padding:5px; font-family:Arial, sans-serif; color:#000;  font-size:14px; line-height:18px;}
+	.tours table tr:nth-child(even) td {background:#fff;}
+	.tours table tr:nth-child(odd) td {background:#e4e4e4;}
 	
 /* footer */
 .footer {margin:20px 0 0;}

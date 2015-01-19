@@ -22,7 +22,8 @@
 		<div class="header_nav">
 			<a href="login.jsp">Login</a>
 			<a href="controller?command=home">Main</a>
-			
+			<c:if test="${not empty user and user.role eq 'admin'}"><a href="controller?command=addUser">Add user</a></c:if>
+			<c:if test="${not empty user and user.role eq 'admin'}"><a href="controller?command=addTour">Add tour</a></c:if>
 		</div>
 	
 		<div class="users">

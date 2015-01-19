@@ -23,6 +23,7 @@ public class ConfigurationManager {
 	public static final String MY_TOURS_PAGE_PATH = "MY_TOURS_PAGE_PATH";
 	public static final String ALL_USERS_PAGE_PATH = "ALL_USERS_PAGE_PATH";
 	public static final String ADD_USER_PAGE_PATH = "ADD_USER_PAGE_PATH";
+	public static final String ADD_TOUR_PAGE_PATH = "ADD_TOUR_PAGE_PATH";
 	
 	public static ConfigurationManager getInstance() {
 		if (instance == null) {

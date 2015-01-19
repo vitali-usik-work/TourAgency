@@ -23,11 +23,13 @@
 			<a href="login.jsp">Login</a>
 			<c:if test="${not empty user and user.role eq 'user'}"><a href="controller?command=viewMyTours&userId=${user.id }">View My Tours</a></c:if>
 			<c:if test="${not empty user and user.role eq 'admin'}"><a href="controller?command=viewAllUsers">View Users</a></c:if>
-			
+			<c:if test="${not empty user and user.role eq 'admin'}"><a href="controller?command=addUser">Add user</a></c:if>
+			<c:if test="${not empty user and user.role eq 'admin'}"><a href="controller?command=addTour">Add tour</a></c:if>
 		</div>
 	
 		<div class="tours">
 			<h4>Tours</h4>
+			<c:if test="${not empty user and user.role eq 'admin'}"><h5><a href="controller?command=addTour">Add tour</a></h5></c:if>
 			<table class="tour_table" width="100%" cellpadding="0" cellspacing="0">
 				<tr>
 					<th>id</th>
@@ -41,6 +43,9 @@
 					<th>free_places</th>
 					<c:if test="${not empty user and user.role eq 'user'}">
 						<th>Book</th>
+					</c:if>
+					<c:if test="${not empty user and user.role eq 'admin'}">
+						<th>Actions</th>
 					</c:if>
 				</tr>
 				<c:forEach  var="tour" items="${tourList}">
@@ -57,6 +62,11 @@
 					<td><c:out value="${tour.free_places}"/></td>
 					<c:if test="${not empty user and user.role eq 'user'}">
 						<td><a href="controller?command=book&tourId=${tour.id}&free_places=${tour.free_places}">Book</a></td>
+					</c:if>
+					<c:if test="${not empty user and user.role eq 'admin'}">
+						<td>
+							<a href="controller?command=deleteTour&tourId=${tour.id }">Delete</a>
+						</td>
 					</c:if>
 				</tr>
 				</c:if>

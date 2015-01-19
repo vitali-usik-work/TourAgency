@@ -28,7 +28,7 @@
 			<input type="hidden" name="command" value="addNewUser"/>
 			Surname:<br/>
 			<input type="text" name="surname" value=""><br/>
-			Name:<br/>
+			Name:<br/><br/>
 			<input type="text" name="name" value="">
 			Role:<br/>
 			<select name="role" size="1">

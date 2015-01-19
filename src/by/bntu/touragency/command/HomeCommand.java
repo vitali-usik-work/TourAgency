@@ -20,8 +20,7 @@ import java.util.List;
  */
 public class HomeCommand implements Command {
 
-	private static org.apache.log4j.Logger logger = 
-			Logger.getLogger(HomeCommand.class);
+    private static org.apache.log4j.Logger logger = Logger.getLogger(HomeCommand.class);
 
 	/**
 	 * @Override

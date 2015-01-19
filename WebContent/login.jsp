@@ -25,7 +25,7 @@
 		Name:<br/>
 		<input type="text" name="name" value=""><br/>
 		Surname:<br/>
-		<input type="text" name="surname" value=""><br/>
+		<input type="text" name="surname" value=""><br/><br/>
 		<input type="submit" value="Enter">
 	</form>
 </div>

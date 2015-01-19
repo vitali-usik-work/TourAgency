@@ -10,6 +10,7 @@ import by.bntu.touragency.command.ConfirmBookCommand;
 import by.bntu.touragency.command.HomeCommand;
 import by.bntu.touragency.command.LoginCommand;
 import by.bntu.touragency.command.NoCommand;
+import by.bntu.touragency.command.ViewAllUsersCommand;
 import by.bntu.touragency.command.ViewMyToursCommand;
 
 /**
@@ -27,19 +28,7 @@ public class RequestHelper {
 		commands.put("book", new BookCommand());
 		commands.put("confirmBook", new ConfirmBookCommand());
 		commands.put("viewMyTours", new ViewMyToursCommand());
-//		commands.put("confirm", new ConfirmOrderCommand());
-//		commands.put("refuse", new RefuseOrderCommand());
-//		commands.put("personalInfo", new AddPersonalInfoCommand());
-//		commands.put("refuseReason", new RefuseReasonCommand());
-//		commands.put("viewRentCars", new ViewRentCarsCommand());
-//		commands.put("addDamage", new AddDamageCommand());
-//		commands.put("returnWithDamages", new ReturnWithDamageCommand());
-//		commands.put("return", new ReturnCommand());
-//		commands.put("exit", new ExitCommand());
-//		commands.put("goMain", new GoMainCommand());
-//		commands.put("myOrders", new MyOrdersCommand());
-//		commands.put("userOrders", new UserOrdersCommand());
-//		commands.put("viewAllOrders", new ViewAllOrdersCommand());
+		commands.put("viewAllUsers", new ViewAllUsersCommand());
 	}
 	
 	/**

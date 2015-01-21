@@ -17,7 +17,7 @@
 			<h1></h1>
 			<p>Hello,<c:out value=" ${user.name}!"/><br />
 			<c:out value=" ${user.role}"/><br />
-			<a href="controller?command=exit"><fmt:message key="main.exit"/></a></p>
+			<a href="controller?command=exit">Exit</a></p>
 		</div>
 		<div class="header_nav">
 			<a href="login.jsp">Login</a>

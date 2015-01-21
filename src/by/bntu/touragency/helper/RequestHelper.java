@@ -13,6 +13,7 @@ import by.bntu.touragency.command.Command;
 import by.bntu.touragency.command.ConfirmBookCommand;
 import by.bntu.touragency.command.DeleteTourCommand;
 import by.bntu.touragency.command.DeleteUserCommand;
+import by.bntu.touragency.command.ExitCommand;
 import by.bntu.touragency.command.HomeCommand;
 import by.bntu.touragency.command.LoginCommand;
 import by.bntu.touragency.command.NoCommand;
@@ -41,6 +42,7 @@ public class RequestHelper {
 		commands.put("deleteTour", new DeleteTourCommand());
 		commands.put("addTour", new AddTourCommand());
 		commands.put("addNewTour", new AddNewTourCommand());
+		commands.put("exit", new ExitCommand());
 	}
 	
 	/**

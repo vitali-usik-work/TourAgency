@@ -8,9 +8,11 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<title>Login</title>
 	<link rel="stylesheet" href="css/style.css" type="text/css" media="screen">
+	<link rel='stylesheet' href='css/redmond/jquery-ui-1.9.2.custom.css' type='text/css'>
 	<script type="text/javascript" src='js/jquery-1.8.3.js'></script>
 	<script type="text/javascript" src='js/jquery.validate.min.js'></script>
 	<script type="text/javascript" src='js/myscripts.js'></script>
+	<script type="text/javascript" src='js/jquery-ui-1.9.2.custom.js'></script>
 	<script type='text/javascript'>
 		function validate() {
 			//Считаем значения из полей name и email в переменные x и y
@@ -69,8 +71,8 @@
 	   			<option value="plane">plane</option>
 	  			<option value="bus">bus</option>
 	   		</select><br/><br/>
-			Date from: <input type="date" name="date_from" value=""><span style='color:red' id='date_fromf'></span><br/><br/>
-			Date to: <input type="date" name="date_to" value=""><span style='color:red' id='date_tof'></span><br/><br/>
+			Date from: <input name="date_from" id="from" value=""><span style='color:red' id='date_fromf'></span><br/><br/>
+			Date to: <input name="date_to" id="to" value=""><span style='color:red' id='date_tof'></span><br/><br/>
 			Country: <input type="text" name="country" value=""><span style='color:red' id='countryf'></span><br/><br/>
 			Hotel:
 			<select name="hotel" size="1">
@@ -161,6 +163,26 @@
 		}
 
 	</script>
+	<script>
+ $(function() {
+  var dates = $( "#from, #to" ).datepicker({
+   minDate: +1,
+   maxDate: "+1M +1D",
+   defaultDate: "+1d",
+   changeMonth: true,
+   numberOfMonths: 1,
+   onSelect: function( selectedDate ) {
+    var option = this.id == "from" ? "minDate" : "maxDate",
+     instance = $( this ).data( "datepicker" ),
+     date = $.datepicker.parseDate(
+      instance.settings.dateFormat ||
+      $.datepicker._defaults.dateFormat,
+      selectedDate, instance.settings );
+    dates.not( this ).datepicker( "option", option, date );
+   }
+  });
+ });
+</script>
 	</div>
 </body>
 </html>

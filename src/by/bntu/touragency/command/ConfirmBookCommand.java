@@ -22,7 +22,7 @@ public class ConfirmBookCommand implements Command {
 		
 		System.out.println(free_places + " " + tourId + " " + amount);
 		try {
-            if(free_places > amount) {
+            if(free_places >= amount) {
                 ConfirmBookLogic.confirmBook(tourId, userId, amount, free_places);
                 request.setAttribute("successMessage" , "The tour is booked");
                 page = ConfigurationManager.getInstance().getProperty(

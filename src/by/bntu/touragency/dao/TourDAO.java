@@ -24,7 +24,7 @@ public class TourDAO {
 			PreparedStatement st = null;
 			
 			try {
-				st = cn.prepareStatement("SELECT * FROM tour");
+				st = cn.prepareStatement("SELECT * FROM tour WHERE free_places > 0;");
 				ResultSet rs = null;
 				
 				try {

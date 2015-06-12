@@ -21,7 +21,7 @@
 			</c:if>
 		</div>
 		<div class="header_nav">
-			<a href="login.jsp">Login</a>
+			<a href="login.jsp" name="login">Login</a>
 			<c:if test="${not empty user and user.role eq 'user'}"><a href="controller?command=viewMyTours&userId=${user.id }">View My Tours</a></c:if>
 			<c:if test="${not empty user and user.role eq 'admin'}"><a href="controller?command=viewAllUsers">View Users</a></c:if>
 			<c:if test="${not empty user and user.role eq 'admin'}"><a href="controller?command=addUser">Add user</a></c:if>

@@ -20,22 +20,40 @@
     <!-- navigation -->
     <%@include file="partials/nav.jspf" %>
 
-    <div class="wrapper">
-      <div class="header_nav">
-        <a href="login.jsp" name="login">Login</a>
-        <c:if test="${not empty user and user.role eq 'user'}">
-          <a href="controller?command=viewMyTours&userId=${user.id }">View
-            My Tours</a>
-        </c:if>
-        <c:if test="${not empty user and user.role eq 'admin'}">
-          <a href="controller?command=viewAllUsers">View Users</a>
-        </c:if>
-        <c:if test="${not empty user and user.role eq 'admin'}">
-          <a href="controller?command=addUser">Add user</a>
-        </c:if>
-        <c:if test="${not empty user and user.role eq 'admin'}">
-          <a href="controller?command=addTour">Add tour</a>
-        </c:if>
+    <div class="content_wrapper">
+      <div class="sidebar">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="login.jsp" name="login">login</a></li>
+          <li>
+            <c:if test="${not empty user and user.role eq 'user'}">
+              <a href="controller?command=viewMyTours&userId=${user.id }">View My Tours</a>
+            </c:if>
+          </li>
+          <li>
+            <c:if test="${not empty user and user.role eq 'admin'}">
+              <a href="controller?command=viewAllUsers">View Users</a>
+            </c:if>
+          </li>
+          <li>
+            <c:if test="${not empty user and user.role eq 'admin'}">
+              <a href="controller?command=addUser">Add user</a>
+            </c:if>
+          </li>
+          <li>
+            <c:if test="${not empty user and user.role eq 'admin'}">
+              <a href="controller?command=addTour">Add tour</a>
+            </c:if>
+          </li>
+        </ul>
+      </div>
+      <div class="content">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc iaculis, lorem quis varius scelerisque, diam augue auctor leo, id porttitor ligula nunc aliquam dui. In quis neque sed orci egestas blandit. Donec auctor elit a turpis pharetra, et sodales nunc congue. Nam ipsum augue, vehicula non bibendum a, cursus viverra turpis. Nullam eu risus auctor, semper felis a, tincidunt nisi. Aliquam vestibulum velit et laoreet dignissim. Pellentesque ac accumsan nunc. Praesent maximus libero vitae eros malesuada, ac eleifend dui suscipit. Maecenas luctus in nisl sed vehicula. Integer volutpat ultricies lacinia. Vestibulum interdum purus vel lectus pharetra, vitae aliquam quam maximus.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc iaculis, lorem quis varius scelerisque, diam augue auctor leo, id porttitor ligula nunc aliquam dui. In quis neque sed orci egestas blandit. Donec auctor elit a turpis pharetra, et sodales nunc congue. Nam ipsum augue, vehicula non bibendum a, cursus viverra turpis. Nullam eu risus auctor, semper felis a, tincidunt nisi. Aliquam vestibulum velit et laoreet dignissim. Pellentesque ac accumsan nunc. Praesent maximus libero vitae eros malesuada, ac eleifend dui suscipit. Maecenas luctus in nisl sed vehicula. Integer volutpat ultricies lacinia. Vestibulum interdum purus vel lectus pharetra, vitae aliquam quam maximus.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc iaculis, lorem quis varius scelerisque, diam augue auctor leo, id porttitor ligula nunc aliquam dui. In quis neque sed orci egestas blandit. Donec auctor elit a turpis pharetra, et sodales nunc congue. Nam ipsum augue, vehicula non bibendum a, cursus viverra turpis. Nullam eu risus auctor, semper felis a, tincidunt nisi. Aliquam vestibulum velit et laoreet dignissim. Pellentesque ac accumsan nunc. Praesent maximus libero vitae eros malesuada, ac eleifend dui suscipit. Maecenas luctus in nisl sed vehicula. Integer volutpat ultricies lacinia. Vestibulum interdum purus vel lectus pharetra, vitae aliquam quam maximus.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc iaculis, lorem quis varius scelerisque, diam augue auctor leo, id porttitor ligula nunc aliquam dui. In quis neque sed orci egestas blandit. Donec auctor elit a turpis pharetra, et sodales nunc congue. Nam ipsum augue, vehicula non bibendum a, cursus viverra turpis. Nullam eu risus auctor, semper felis a, tincidunt nisi. Aliquam vestibulum velit et laoreet dignissim. Pellentesque ac accumsan nunc. Praesent maximus libero vitae eros malesuada, ac eleifend dui suscipit. Maecenas luctus in nisl sed vehicula. Integer volutpat ultricies lacinia. Vestibulum interdum purus vel lectus pharetra, vitae aliquam quam maximus.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc iaculis, lorem quis varius scelerisque, diam augue auctor leo, id porttitor ligula nunc aliquam dui. In quis neque sed orci egestas blandit. Donec auctor elit a turpis pharetra, et sodales nunc congue. Nam ipsum augue, vehicula non bibendum a, cursus viverra turpis. Nullam eu risus auctor, semper felis a, tincidunt nisi. Aliquam vestibulum velit et laoreet dignissim. Pellentesque ac accumsan nunc. Praesent maximus libero vitae eros malesuada, ac eleifend dui suscipit. Maecenas luctus in nisl sed vehicula. Integer volutpat ultricies lacinia. Vestibulum interdum purus vel lectus pharetra, vitae aliquam quam maximus.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc iaculis, lorem quis varius scelerisque, diam augue auctor leo, id porttitor ligula nunc aliquam dui. In quis neque sed orci egestas blandit. Donec auctor elit a turpis pharetra, et sodales nunc congue. Nam ipsum augue, vehicula non bibendum a, cursus viverra turpis. Nullam eu risus auctor, semper felis a, tincidunt nisi. Aliquam vestibulum velit et laoreet dignissim. Pellentesque ac accumsan nunc. Praesent maximus libero vitae eros malesuada, ac eleifend dui suscipit. Maecenas luctus in nisl sed vehicula. Integer volutpat ultricies lacinia. Vestibulum interdum purus vel lectus pharetra, vitae aliquam quam maximus.</p>
       </div>
     </div>
 

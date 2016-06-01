@@ -27,3 +27,13 @@ nav > ul > li > a:hover {background: #78d8f8; color: #005F7F;}
 
 footer {background: #fff; position: absolute; bottom: 10px; left: 50%; margin-left: -600px; width: 1200px; height: 85px; background: url(../assets/footer_seaside.jpg) 0 0 no-repeat; border-radius: 10px;}
 footer > p {text-align: center; font-size: 16px; line-height: 20px; margin-top: 30px; color: #484545;}
+
+.content_wrapper {display: block; position: relative; overflow: hidden; margin: 10px 0;}
+.sidebar {display: block; position: relative; float: left; background: #fff; padding: 10px; border-radius: 5px; width: 20%;}
+.sidebar > h4 {color: #005F7F; text-transform: uppercase;}
+.sidebar > ul {margin: 5px 5px 10px 10px;}
+.sidebar > ul > li {color: #00b0eb;}
+.sidebar > ul > li > a {text-decoration: none; text-transform: uppercase; color: #78d8f8; font-size: 16px;}
+.sidebar > ul > li > a:hover {text-decoration: underline;}
+.content {display: block; position: relative; float: right; background: #fff; padding: 10px; border-radius: 5px; width: 76%;}
+.content > p {margin-bottom: 10px; color: #484545; font-size: 16px; line-height: 18px;}

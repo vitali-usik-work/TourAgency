@@ -32,8 +32,26 @@ footer > p {text-align: center; font-size: 16px; line-height: 20px; margin-top: 
 .sidebar {display: block; position: relative; float: left; background: #fff; padding: 10px; border-radius: 5px; width: 20%;}
 .sidebar > h4 {color: #005F7F; text-transform: uppercase;}
 .sidebar > ul {margin: 5px 5px 10px 10px;}
-.sidebar > ul > li {color: #00b0eb;}
+.sidebar > ul > li {color: #00b0eb; margin: 5px 0;}
 .sidebar > ul > li > a {text-decoration: none; text-transform: uppercase; color: #78d8f8; font-size: 16px;}
 .sidebar > ul > li > a:hover {text-decoration: underline;}
 .content {display: block; position: relative; float: right; background: #fff; padding: 10px; border-radius: 5px; width: 76%;}
 .content > p {margin-bottom: 10px; color: #484545; font-size: 16px; line-height: 18px;}
+
+.login_wrapper {display: block; position: relative; margin: 40px;}
+.login_wrapper > h4 {text-transform: uppercase; font-size: 25px; margin: 20px auto; color: #484545;}
+.form_field {display: block; position: relative; overflow: hidden; width: 900px; margin: 10px auto;}
+.form_field input[type=submit] {margin-left: 220px; border: 1px solid #005F7F; width: 321px; height: 40px; border-radius: 5px; background: #78d8f8; text-transform: uppercase; font-size: 20px; cursor: pointer;}
+.form_name {display: block; position: relative; float: left; width: 200px; text-align: right; margin-right: 20px;}
+.form_name > p {font-size: 20px; line-height: 40px; text-transform: uppercase; color: #484545;}
+.form_input {display: block; position: relative; float: left; width: 350px;}
+.form_input input {height: 40px; width: 300px; border: 1px solid #005F7F; border-radius: 5px; padding: 0 10px; font-size: 20px;}
+
+
+
+
+
+
+
+
+

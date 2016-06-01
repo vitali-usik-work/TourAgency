@@ -1,6 +1,6 @@
 <nav>
   <ul>
-    <li class="nav_li"><a href="#">main</a></li>
+    <li class="nav_li"><a href="controller?command=main">main</a></li>
     <li><a href="#">news</a></li>
     <li><a href="#">tour search</a></li>
     <li><a href="#">contacts</a></li>

@@ -4,12 +4,13 @@ div {display:block; position:relative;}
 ul {list-style:none;}
 .clr::after {display:none; position:relative; content:' '; color:transparent; font-size:3px; line-height:3px; clear:both;}
 
+html {position: relative; min-height: 100%;}
 body {background: #f1f1f1; font-family: 'Arial', sans-serif;}
 
 /* wrapper */
-.wrapper {width:1200px; margin:0 auto;}
+.container_wrapper {width:1200px; margin: 0 auto 95px auto; height: 100%;} /* margin-bottom size value equals footer height value */
 
-header {position: relative; width: 1200px; height: 231px; background: url(../assets/header_seaside.jpg) 0 0 no-repeat; border-radius: 10px;}
+header {position: relative; width: 1200px; height: 231px; margin: 10px 0; background: url(../assets/header_seaside.jpg) 0 0 no-repeat; border-radius: 10px;}
 .header_logo {position: relative; float: left; margin: 50px 0 0 100px;}
 .header_logo > a {background: url(../assets/evropa-tour-logo.png) 0 0 no-repeat; background-size: 150px 37px; padding: 37px 150px 0 0;}
 .header_greet {float: right; margin: 15px 30px 0 0; text-align: right;}
@@ -17,3 +18,12 @@ header {position: relative; width: 1200px; height: 231px; background: url(../ass
 .header_greet > p {font-size: 16px; color: #484545;}
 .header_greet > p > a {font-size: 14px; text-decoration: none; color: #484545;}
 .header_greet > p > a:hover {text-decoration: underline;}
+
+nav {margin: 10px 0; background: #fff; border-radius: 10px; padding: 5px;}
+nav > ul {display: block; position: relative;}
+nav > ul > li {display: inline-block; width: 24.5%; text-align: center; text-transform: uppercase;}
+nav > ul > li > a {display: block; text-decoration: none; padding: 10px; border-radius: 5px; color: #00b0eb;}
+nav > ul > li > a:hover {background: #78d8f8; color: #005F7F;}
+
+footer {background: #fff; position: absolute; bottom: 10px; left: 50%; margin-left: -600px; width: 1200px; height: 85px; background: url(../assets/footer_seaside.jpg) 0 0 no-repeat; border-radius: 10px;}
+footer > p {text-align: center; font-size: 16px; line-height: 20px; margin-top: 30px; color: #484545;}

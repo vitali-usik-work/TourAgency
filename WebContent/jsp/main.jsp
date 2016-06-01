@@ -13,28 +13,38 @@
   media="screen">
 </head>
 <body>
-  <div class="wrapper">
+  
+  <div class="container_wrapper">
+    <!-- header -->
     <%@include file="partials/header.jspf" %>
-    
-    
-    <div class="header_nav">
-      <a href="login.jsp" name="login">Login</a>
-      <c:if test="${not empty user and user.role eq 'user'}">
-        <a href="controller?command=viewMyTours&userId=${user.id }">View
-          My Tours</a>
-      </c:if>
-      <c:if test="${not empty user and user.role eq 'admin'}">
-        <a href="controller?command=viewAllUsers">View Users</a>
-      </c:if>
-      <c:if test="${not empty user and user.role eq 'admin'}">
-        <a href="controller?command=addUser">Add user</a>
-      </c:if>
-      <c:if test="${not empty user and user.role eq 'admin'}">
-        <a href="controller?command=addTour">Add tour</a>
-      </c:if>
+    <!-- navigation -->
+    <%@include file="partials/nav.jspf" %>
+
+    <div class="wrapper">
+      <div class="header_nav">
+        <a href="login.jsp" name="login">Login</a>
+        <c:if test="${not empty user and user.role eq 'user'}">
+          <a href="controller?command=viewMyTours&userId=${user.id }">View
+            My Tours</a>
+        </c:if>
+        <c:if test="${not empty user and user.role eq 'admin'}">
+          <a href="controller?command=viewAllUsers">View Users</a>
+        </c:if>
+        <c:if test="${not empty user and user.role eq 'admin'}">
+          <a href="controller?command=addUser">Add user</a>
+        </c:if>
+        <c:if test="${not empty user and user.role eq 'admin'}">
+          <a href="controller?command=addTour">Add tour</a>
+        </c:if>
+      </div>
     </div>
 
-    
   </div>
+  <!-- /page container with header and main part -->
+  <!-- footer -->
+  <%@include file="partials/footer.jspf"%>
+
+
+
 </body>
 </html>

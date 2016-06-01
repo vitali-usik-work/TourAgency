@@ -38,7 +38,7 @@ public class HomeCommand implements Command {
 			
 			request.setAttribute("tourList", tourList);
 			page = ConfigurationManager.getInstance().getProperty(
-						ConfigurationManager.MAIN_PAGE_PATH);
+						ConfigurationManager.HOME_PAGE_PATH);
 			} catch (Exception e) {
 				logger.error("Logic Technical Exception" + e);
 			}

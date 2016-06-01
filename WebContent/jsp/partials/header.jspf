@@ -1,0 +1,18 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<header>
+  <div class="header_logo">
+    <a href="controller?command=main" title="go main page"></a>
+  </div>
+  <div class="header_greet clr">
+    <c:if test="${not empty user}">
+      <h6><c:out value=" ${user.name}" /> <c:out value=" ${user.surname}" /></h6>
+      <p>
+        <c:if test="${not empty user and user.role eq 'admin'}">
+          administrator
+        </c:if>
+      </p>
+      <p><a href="controller?command=exit">Exit</a>
+      </p>
+    </c:if>
+  </div>
+</header>

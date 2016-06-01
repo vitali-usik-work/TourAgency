@@ -16,6 +16,7 @@ import by.bntu.touragency.command.DeleteUserCommand;
 import by.bntu.touragency.command.ExitCommand;
 import by.bntu.touragency.command.HomeCommand;
 import by.bntu.touragency.command.LoginCommand;
+import by.bntu.touragency.command.MainCommand;
 import by.bntu.touragency.command.NoCommand;
 import by.bntu.touragency.command.ViewAllUsersCommand;
 import by.bntu.touragency.command.ViewMyToursCommand;
@@ -30,6 +31,7 @@ public class RequestHelper {
 	
 	private RequestHelper() {
 		// fill the table with commands
+	    commands.put("main", new MainCommand());
 		commands.put("home", new HomeCommand());
 		commands.put("login", new LoginCommand());
 		commands.put("book", new BookCommand());

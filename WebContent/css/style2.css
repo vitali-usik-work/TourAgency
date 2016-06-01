@@ -1,0 +1,19 @@
+* {padding:0; margin:0;}
+img {border:0 none;}
+div {display:block; position:relative;}
+ul {list-style:none;}
+.clr::after {display:none; position:relative; content:' '; color:transparent; font-size:3px; line-height:3px; clear:both;}
+
+body {background: #f1f1f1; font-family: 'Arial', sans-serif;}
+
+/* wrapper */
+.wrapper {width:1200px; margin:0 auto;}
+
+header {position: relative; width: 1200px; height: 231px; background: url(../assets/header_seaside.jpg) 0 0 no-repeat; border-radius: 10px;}
+.header_logo {position: relative; float: left; margin: 50px 0 0 100px;}
+.header_logo > a {background: url(../assets/evropa-tour-logo.png) 0 0 no-repeat; background-size: 150px 37px; padding: 37px 150px 0 0;}
+.header_greet {float: right; margin: 15px 30px 0 0; text-align: right;}
+.header_greet > h6 {font-size: 18px; color: #484545; text-transform: uppercase;}
+.header_greet > p {font-size: 16px; color: #484545;}
+.header_greet > p > a {font-size: 14px; text-decoration: none; color: #484545;}
+.header_greet > p > a:hover {text-decoration: underline;}

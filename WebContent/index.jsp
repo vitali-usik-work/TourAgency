@@ -9,7 +9,7 @@
 <title>Welcome</title>
 </head>
 <body>
-	<c:redirect url="controller?command=home" />
+	<c:redirect url="controller?command=main" />
 </body>
 </html>
 

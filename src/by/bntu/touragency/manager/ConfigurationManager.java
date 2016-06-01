@@ -16,6 +16,7 @@ public class ConfigurationManager {
 	public static final String DATABASE_DRIVER_NAME = "DATABASE_DRIVER_NAME";
 	public static final String DATABASE_URL = "DATABASE_URL";
 	public static final String LOGIN_PAGE_PATH = "LOGIN_PAGE_PATH";
+	public static final String HOME_PAGE_PATH = "HOME_PAGE_PATH";
 	public static final String MAIN_PAGE_PATH = "MAIN_PAGE_PATH";
 	public static final String CONFIRM_BOOK_PAGE_PATH = "CONFIRM_BOOK_PAGE_PATH";
 	public static final String ERROR_PAGE_PATH = "ERROR_PAGE_PATH";

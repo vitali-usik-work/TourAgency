@@ -3,7 +3,7 @@
   <h4>Navigation</h4>
   <ul>
     <li><a href="login.jsp" name="login">login</a></li>
-    <li><a href="controller?command=home">tours</a></li>
+    <li><a href="controller?command=tours">tours</a></li>
     <li><c:if test="${not empty user and user.role eq 'user'}">
         <a href="controller?command=viewMyTours&userId=${user.id }">View My Tours</a>
       </c:if></li>

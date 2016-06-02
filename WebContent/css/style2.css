@@ -47,7 +47,13 @@ footer > p {text-align: center; font-size: 16px; line-height: 20px; margin-top: 
 .form_input {display: block; position: relative; float: left; width: 350px;}
 .form_input input {height: 40px; width: 300px; border: 1px solid #005F7F; border-radius: 5px; padding: 0 10px; font-size: 20px;}
 
-
+.tours {margin:20px;}
+.tours > h4 {text-transform: uppercase; font-size: 25px; margin: 20px auto; color: #484545;}
+.tours table {border:1px solid #666; width:100%; border-radius: 5px 5px 0 0;}
+.tours table th {padding:5px; font-family:Arial, sans-serif; color:#000; background:#00b0eb; font-size:14px; line-height:18px; text-align:left; text-transform: uppercase;}
+.tours table td {padding:5px; font-family:Arial, sans-serif; color:#000;  font-size:14px; line-height:18px;}
+.tours table tr:nth-child(even) td {background:#fff;}
+.tours table tr:nth-child(odd) td {background:#e4e4e4;}
 
 
 

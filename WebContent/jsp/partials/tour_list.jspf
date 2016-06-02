@@ -1,0 +1,52 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<div class="tours">
+  <h4><c:out value="${pageHeader}" /></h4>
+  <c:if test="${not empty user and user.role eq 'admin'}">
+    <h5>
+      <a href="controller?command=addTour">Add tour</a>
+    </h5>
+  </c:if>
+  <table class="tour_table" width="100%" cellpadding="0" cellspacing="0">
+    <tr>
+      <th>id</th>
+      <th>cost</th>
+      <th>transport</th>
+      <th>from</th>
+      <th>to</th>
+      <th>country</th>
+      <th>hotel</th>
+      <th>type</th>
+      <th>free places</th>
+      <c:if test="${not empty user and user.role eq 'user' and pageName ne 'viewMyTours'}">
+        <th>Book</th>
+      </c:if>
+      <c:if test="${not empty user and user.role eq 'admin'}">
+        <th>Actions</th>
+      </c:if>
+    </tr>
+    <c:forEach var="tour" items="${tourList}">
+      <c:if test="${not empty tour}">
+        <tr>
+          <td><c:out value="${tour.id}" /></td>
+          <td><c:out value="${tour.cost}" /></td>
+          <td><c:out value="${tour.transport}" /></td>
+          <td><c:out value="${tour.date_from}" /></td>
+          <td><c:out value="${tour.date_to}" /></td>
+          <td><c:out value="${tour.country}" /></td>
+          <td><c:out value="${tour.hotel}" /></td>
+          <td><c:out value="${tour.type_of_trip}" /></td>
+          <td><c:out value="${tour.free_places}" /></td>
+          <c:if test="${not empty user and user.role eq 'user' and pageName ne 'viewMyTours'}">
+            <td><a
+              href="controller?command=book&tourId=${tour.id}&free_places=${tour.free_places}">Book</a></td>
+          </c:if>
+          <c:if test="${not empty user and user.role eq 'admin'}">
+            <td><a
+              href="controller?command=deleteTour&tourId=${tour.id }">Delete</a>
+            </td>
+          </c:if>
+        </tr>
+      </c:if>
+    </c:forEach>
+  </table>
+</div>

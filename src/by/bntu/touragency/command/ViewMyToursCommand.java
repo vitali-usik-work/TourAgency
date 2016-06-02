@@ -30,6 +30,8 @@ public class ViewMyToursCommand implements Command {
             tourList = TourLogic.buildMyTourList(userId);
             
             request.setAttribute("tourList", tourList);
+            request.setAttribute("pageName", request.getParameter("command"));
+            request.setAttribute("pageHeader", "My booked tours");
             page = ConfigurationManager.getInstance().getProperty(
                         ConfigurationManager.MY_TOURS_PAGE_PATH);
             } catch (Exception e) {

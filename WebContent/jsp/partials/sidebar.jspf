@@ -2,19 +2,43 @@
 <div class="sidebar">
   <h4>Navigation</h4>
   <ul>
-    <li><a href="login.jsp" name="login">login</a></li>
-    <li><a href="controller?command=tours">tours</a></li>
-    <li><c:if test="${not empty user and user.role eq 'user'}">
+    <li>
+      <c:if test="${empty user}">
+        <a href="login.jsp">log in</a>
+      </c:if>
+    </li>
+    <li>
+      <c:if test="${empty user}">
+        <a href="controller?command=addUser">register</a>
+      </c:if>
+    </li>
+    <li>
+      <a href="controller?command=tours">tours</a>
+    </li>
+    <li>
+      <c:if test="${not empty user and user.role eq 'user'}">
         <a href="controller?command=viewMyTours&userId=${user.id }">View My Tours</a>
-      </c:if></li>
-    <li><c:if test="${not empty user and user.role eq 'admin'}">
+      </c:if>
+    </li>
+    <li>
+      <c:if test="${not empty user and user.role eq 'admin'}">
         <a href="controller?command=viewAllUsers">View Users</a>
-      </c:if></li>
-    <li><c:if test="${not empty user and user.role eq 'admin'}">
+      </c:if>
+    </li>
+    <li>
+      <c:if test="${not empty user and user.role eq 'admin'}">
         <a href="controller?command=addUser">Add user</a>
-      </c:if></li>
-    <li><c:if test="${not empty user and user.role eq 'admin'}">
+      </c:if>
+    </li>
+    <li>
+      <c:if test="${not empty user and user.role eq 'admin'}">
         <a href="controller?command=addTour">Add tour</a>
-      </c:if></li>
+      </c:if>
+    </li>
+    <li>
+      <c:if test="${not empty user}">
+        <a href="controller?command=exit">sign out</a>
+      </c:if>
+    </li>
   </ul>
 </div>

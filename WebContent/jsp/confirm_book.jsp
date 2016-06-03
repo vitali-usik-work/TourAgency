@@ -23,7 +23,6 @@
       <%@include file="partials/sidebar.jspf"%>
       <!-- content -->
       <div class="content">
-
         <div class="tours">
           <h4>Confirm Tour</h4>
           <form action="controller" method="post">
@@ -50,13 +49,11 @@
             </div>
           </form>
         </div>
-
       </div>
     </div>
   </div>
   <!-- /page container with header and main part -->
   <!-- footer -->
   <%@include file="partials/footer.jspf"%>
-
 </body>
 </html>

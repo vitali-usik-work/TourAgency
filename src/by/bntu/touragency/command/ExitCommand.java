@@ -11,19 +11,17 @@ import by.bntu.touragency.manager.ConfigurationManager;
 
 public class ExitCommand implements Command {
 
-	@Override
-	public String execute(HttpServletRequest request,
-			HttpServletResponse response) throws ServletException, IOException {
-		
-		String page = null;
-		HttpSession session = request.getSession();
-		
-		if (session != null) {
-			session.invalidate();
-		}
-		page = ConfigurationManager.getInstance().getProperty(
-				ConfigurationManager.LOGIN_PAGE_PATH);
-		return page;
-	}
+  @Override
+  public String execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
+    String page = null;
+    HttpSession session = request.getSession();
+
+    if (session != null) {
+      session.invalidate();
+    }
+    page = ConfigurationManager.getInstance().getProperty(ConfigurationManager.MAIN_PAGE_PATH);
+    return page;
+  }
 
 }

@@ -11,7 +11,7 @@
           administrator
         </c:if>
       </p>
-      <p><a href="controller?command=exit">Exit</a>
+      <p><a href="controller?command=exit">Sign Out</a>
       </p>
     </c:if>
   </div>

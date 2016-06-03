@@ -11,28 +11,29 @@ import by.bntu.touragency.manager.ConfigurationManager;
 
 public class AddNewUserCommand implements Command {
 
-    @Override
-    public String execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        
-        String page = null;
-        // extraction of login & password
-        String name = request.getParameter("name");
-        String surname = request.getParameter("surname");
-        String role = request.getParameter("role");
+  @Override
+  public String execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-        // login and password check
-        try {
-            UserLogic.addUser(surname, name, role, 0, 0);
-            request.setAttribute("successMessage" , "User created");
-            page = ConfigurationManager.getInstance().getProperty(
-                    ConfigurationManager.SUCCESS_PAGE_PATH);
-            
-        } catch (Exception ex ) {
-            request.setAttribute("invalidLogin","invalid logi");
-            page = ConfigurationManager.getInstance().getProperty(
-                    ConfigurationManager.LOGIN_PAGE_PATH);
-        }
-        return page;
+    String page = null;
+    // extraction of login & password
+    String name = request.getParameter("name");
+    String surname = request.getParameter("surname");
+    String role = request.getParameter("role");
+    if ("".equals(role) || role == null) {
+      role = "user";
     }
+
+    // login and password check
+    try {
+      UserLogic.addUser(surname, name, role, 0, 0);
+      request.setAttribute("successMessage", "Account registered");
+      page = ConfigurationManager.getInstance().getProperty(ConfigurationManager.SUCCESS_PAGE_PATH);
+
+    } catch (Exception ex) {
+      request.setAttribute("invalidLogin", "invalid login");
+      page = ConfigurationManager.getInstance().getProperty(ConfigurationManager.LOGIN_PAGE_PATH);
+    }
+    return page;
+  }
 
 }

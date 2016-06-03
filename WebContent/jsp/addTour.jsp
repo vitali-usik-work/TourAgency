@@ -1,19 +1,21 @@
 <%@ page language="java" contentType="text/html; charset=Utf-8"
-    pageEncoding="Utf-8"%>
+  pageEncoding="Utf-8"%>
 <!DOCTYPE html>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <html>
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<title>Login</title>
-	<link rel="stylesheet" href="css/style.css" type="text/css" media="screen">
-	<link rel='stylesheet' href='css/redmond/jquery-ui-1.9.2.custom.css' type='text/css'>
-	<script type="text/javascript" src='js/jquery-1.8.3.js'></script>
-	<script type="text/javascript" src='js/jquery.validate.min.js'></script>
-	<script type="text/javascript" src='js/myscripts.js'></script>
-	<script type="text/javascript" src='js/jquery-ui-1.9.2.custom.js'></script>
-	<script type='text/javascript'>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Add new tour</title>
+<link rel="stylesheet" href="css/style2.css" type="text/css"
+  media="screen">
+<link rel='stylesheet' href='css/redmond/jquery-ui-1.9.2.custom.css'
+  type='text/css'>
+<script type="text/javascript" src='js/jquery-1.8.3.js'></script>
+<script type="text/javascript" src='js/jquery.validate.min.js'></script>
+<script type="text/javascript" src='js/myscripts.js'></script>
+<script type="text/javascript" src='js/jquery-ui-1.9.2.custom.js'></script>
+<script type='text/javascript'>
 		function validate() {
 			//Считаем значения из полей name и email в переменные x и y
 			var x = document.forms['tourForm']['cost'].value;
@@ -47,53 +49,115 @@
 	</script>
 </head>
 <body>
-
-<div class="wrapper">
-	<div class="header">
-		<h1>Login</h1>
-		<c:if test="${not empty user}">
-			<p>Hello,<c:out value=" ${user.name}!"/><br />
-			<c:out value=" ${user.role}"/><br />
-			<a href="controller?command=exit">Exit</a></p>
-		</c:if>
-	</div>
-	<div class="header_nav">
-		<a href="login.jsp">Login</a>
-		<a href="controller?command=home">Main</a>
-	</div>
-	<div class="users">
-		<h4>Add new tour</h4>
-		<form name="tourForm" method="post" id="tourform" action="controller" onsubmit='return validate()'>
-			<input type="hidden" name="command" value="addNewTour"/>
-			Cost: <input type="text" name="cost" value=""><span style='color:red' id='costf'></span><br/><br/>
-			Transport:
-			<select name="transport" size="1">
-	   			<option value="plane">plane</option>
-	  			<option value="bus">bus</option>
-	   		</select><br/><br/>
-			Date from: <input name="date_from" id="from" value=""><span style='color:red' id='date_fromf'></span><br/><br/>
-			Date to: <input name="date_to" id="to" value=""><span style='color:red' id='date_tof'></span><br/><br/>
-			Country: <input type="text" name="country" value=""><span style='color:red' id='countryf'></span><br/><br/>
-			Hotel:
-			<select name="hotel" size="1">
-	   			<option value="1">1</option>
-	  			<option value="2">2</option>
-	  			<option value="3">3</option>
-	  			<option value="4">4</option>
-	  			<option value="5">5</option>
-	   		</select><br/><br/>
-			Type of trip:
-			<select name="type_of_trip" size="1">
-	   			<option value="mountains">mountains</option>
-	  			<option value="sea">sea</option>
-	  			<option value="excursion">excursion</option>
-	  			<option value="shopping">shopping</option>
-	   		</select><br/><br/>
-			Free places: <input type="number" name="free_places" value=""><span style='color:red' id='free_placesf'></span><br/><br/>
-			<input type="submit" value="Enter">
-		</form>
-	</div>
-		<script>
+  <div class="container_wrapper">
+    <!-- header -->
+    <%@include file="partials/header.jspf"%>
+    <!-- navigation -->
+    <%@include file="partials/nav.jspf"%>
+    <div class="content_wrapper">
+      <!-- sidebar -->
+      <%@include file="partials/sidebar.jspf"%>
+      <!-- content -->
+      <div class="content">
+        <div class="tours">
+          <h4>Add new tour</h4>
+          <form name="tourForm" method="post" id="tourform" action="controller" onsubmit='return validate()'>
+            <input type="hidden" name="command" value="addNewTour" />
+            <div class="form_field">
+              <div class="form_name">
+                <p>Cost:</p>
+              </div>
+              <div class="form_input clr">
+                <input type="text" name="cost" placeholder="enter tour's cost" value="">
+                <span style='color: red' id='costf'></span>
+              </div>
+            </div>
+            <div class="form_field">
+              <div class="form_name">
+                <p>Transport:</p>
+              </div>
+              <div class="form_input clr">
+                <select name="transport" size="1">
+                  <option value="plane">plane</option>
+                  <option value="bus">bus</option>
+                </select>
+              </div>
+            </div>
+            <div class="form_field">
+              <div class="form_name">
+                <p>Date from:</p>
+              </div>
+              <div class="form_input clr">
+                <input name="date_from" id="from" value="">
+                <span style='color: red' id='date_fromf'></span>
+              </div>
+            </div>
+            <div class="form_field">
+              <div class="form_name">
+                <p>Date to:</p>
+              </div>
+              <div class="form_input clr">
+                <input name="date_to" id="to" value="">
+                <span style='color: red' id='date_tof'></span>
+              </div>
+            </div>
+            <div class="form_field">
+              <div class="form_name">
+                <p>Country:</p>
+              </div>
+              <div class="form_input clr">
+                <input type="text" name="country" value="">
+                <span style='color: red' id='countryf'></span>
+              </div>
+            </div>
+            <div class="form_field">
+              <div class="form_name">
+                <p>Hotel:</p>
+              </div>
+              <div class="form_input clr">
+                <select name="hotel" size="1">
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                </select>
+              </div>
+            </div>
+            <div class="form_field">
+              <div class="form_name">
+                <p>Type of trip:</p>
+              </div>
+              <div class="form_input clr">
+                <select name="type_of_trip" size="1">
+                  <option value="mountains">mountains</option>
+                  <option value="sea">sea</option>
+                  <option value="excursion">excursion</option>
+                  <option value="shopping">shopping</option>
+                </select>
+              </div>
+            </div>
+            <div class="form_field">
+              <div class="form_name">
+                <p>Free places:</p>
+              </div>
+              <div class="form_input clr">
+                <input type="number" name="free_places" value="">
+                <span style='color: red' id='free_placesf'></span>
+              </div>
+            </div>
+            <div class="form_field">
+              <input type="submit" value="Submit new tour">
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- /page container with header and main part -->
+  <!-- footer -->
+  <%@include file="partials/footer.jspf"%>
+    <script>
 
 		document.getElementsByTagName('input')[1].onkeypress = function(e) {
 		
@@ -128,7 +192,7 @@
 		}
 
 	</script>
-	<script>
+    <script>
 
 		document.getElementsByTagName('input')[5].onkeypress = function(e) {
 		
@@ -163,7 +227,7 @@
 		}
 
 	</script>
-	<script>
+    <script>
  $(function() {
   var dates = $( "#from, #to" ).datepicker({
    minDate: +1,
@@ -183,6 +247,6 @@
   });
  });
 </script>
-	</div>
+
 </body>
 </html>

@@ -16,29 +16,27 @@ import by.bntu.touragency.model.Tour;
 
 public class ViewMyToursCommand implements Command {
 
-    private static org.apache.log4j.Logger logger = 
-            Logger.getLogger(ViewMyToursCommand.class);
-    
-    @Override
-    public String execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        String page = null;
+  private static org.apache.log4j.Logger logger = Logger.getLogger(ViewMyToursCommand.class);
 
-        int userId = Integer.parseInt(request.getParameter("userId"));
-        
-        try {
-            List<Tour> tourList = new ArrayList<Tour>();
-            tourList = TourLogic.buildMyTourList(userId);
-            
-            request.setAttribute("tourList", tourList);
-            request.setAttribute("pageName", request.getParameter("command"));
-            request.setAttribute("pageHeader", "My booked tours");
-            page = ConfigurationManager.getInstance().getProperty(
-                        ConfigurationManager.MY_TOURS_PAGE_PATH);
-            } catch (Exception e) {
-                logger.error("Logic Technical Exception" + e);
-            }
+  @Override
+  public String execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    String page = null;
 
-        return page;
+    int userId = Integer.parseInt(request.getParameter("userId"));
+
+    try {
+      List<Tour> tourList = new ArrayList<Tour>();
+      tourList = TourLogic.buildMyTourList(userId);
+
+      request.setAttribute("tourList", tourList);
+      request.setAttribute("pageName", request.getParameter("command"));
+      request.setAttribute("pageHeader", "'s booked tours");
+      page = ConfigurationManager.getInstance().getProperty(ConfigurationManager.MY_TOURS_PAGE_PATH);
+    } catch (Exception e) {
+      logger.error("Logic Technical Exception" + e);
     }
+
+    return page;
+  }
 
 }

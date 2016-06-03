@@ -10,16 +10,14 @@ import by.bntu.touragency.manager.ConfigurationManager;
 
 public class AddUserCommand implements Command {
 
-    @Override
-    public String execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        
-        String page = null;
+  @Override
+  public String execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-        page = ConfigurationManager.getInstance().getProperty(
-                ConfigurationManager.ADD_USER_PAGE_PATH);
-        
-        
-        return page;
-    }
+    String page = null;
+
+    page = ConfigurationManager.getInstance().getProperty(ConfigurationManager.ADD_USER_PAGE_PATH);
+
+    return page;
+  }
 
 }
